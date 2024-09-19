@@ -8,35 +8,19 @@ import Resume from './pages/resume';
 import Skills from './pages/skills';
 import About from './pages/about';
 import Navbar from './components/navBar';
-// import particles from './utils/particles';
-import { loadStarsPreset } from "tsparticles-preset-stars";
+import ContactIcons from './components/contactIcons'
 
 function App() {
 
   const location = useLocation();
   console.log(location)
 
-  function particlesInit(tsParticles) {
-    console.log("init", tsParticles);
-
-    loadStarsPreset(tsParticles);
-  }
-
-  const renderParticleJsInHomePage = location.pathname === "/";
-
   return (
     <div className="App">
-      {
-        renderParticleJsInHomePage &&
-        <Particles
-          options={{
-            preset: "stars"
-          }}
-          init={particlesInit}
-        />
-      }
 
       <Navbar />
+
+      <ContactIcons />
 
       <div className='App__main-page-content'>
         <Routes>

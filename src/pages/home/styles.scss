@@ -1,6 +1,6 @@
-
-
 .home {
+  margin-left: 15rem;
+  margin-right: 15rem;
   position: relative;
   height: 100%;
   display: flex;
@@ -9,7 +9,11 @@
   flex-direction: column;
 
   &__text-wrapper {
-    text-align: center;
+    text-align: left;
+    color: var(--theme-main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .line-break {
       width: 100%;
@@ -17,30 +21,56 @@
     }
 
     h1 {
-      color: var(--theme-text-color);
       margin: 0px;
+      background: linear-gradient(#F3D5B6, rgb(194, 239, 241));
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-weight: 900;
-      font-size: 12rem;
-      line-height: 24rem;
+      font-size: 8rem;
+      line-height: 16rem;
       position: relative;
-      overflow: hidden;
-      white-space: nowrap;
+      font-style: italic;
     }
 
     h2 {
-      color: var(--theme-text-color);
       font-family: var(--theme-secondary-font-family);
       margin: 0px;
-      font-weight: 100;
-      font-size: 5rem;
-      line-height: 10rem;
+      font-weight: 250;
+      width: 75%;
+      font-size: 3rem;
+      line-height: 5rem;
       position: relative;
-      overflow: hidden;
-      white-space: nowrap;
+    }
 
-      span {
-        color: var(--theme-main-color);
-        font-weight: 700;
+    h3 {
+      font-size: 3rem;
+      font-style: italic;
+    }
+    p {
+    //   font-family: var(--theme-secondary-font-family);
+      font-size: 1.8rem;
+      color: var(--theme-secondary-color);
+    }
+
+    &__name-and-bio {
+        display: flex;
+        flex-direction: column;
+      }
+
+    &__additional-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .currently {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .drivenBy {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -61,36 +91,19 @@
       font-weight: 500;
 
       &#hireMe {
-        color: var(--theme-text-color);
-        border: 1.5px solid var(--theme-text-color);
+        color: var(--theme-main-color);
+        border: 1.5px solid var(--theme-main-color);
         &:hover {
-          background-color: var(--theme-text-color);
+          background-color: var(--theme-main-color);
           color: black;
           transition: 0.2s ease;
         }
       }
 
       &#viewMyWork {
-        color: var(--theme-text-color);
+        color: var(--theme-main-color);
         background-color: var(--theme-main-color);
         border: 1.5px solid var(--theme-main-color);
-      }
-    }
-  }
-  &__contactIcons {
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-    color: var(--theme-text-color);
-
-    &-icon {
-      margin-left: 20px;
-      margin-right: 20px;
-      cursor: pointer;
-      transition:.5s;
-      &:hover {
-        transform:scale(1.5);
-        color: var(--theme-main-color)
       }
     }
   }
@@ -101,12 +114,28 @@
     font-size: 3rem;
     line-height: 5rem;
   }
+  .home__text-wrapper h2 {
+    font-size: 1rem;
+    line-height: 3rem;
+  }
+  .home__text-wrapper h3 {
+    font-size: 1rem;
+    line-height: 4rem;
+  }
 }
 
 @media only screen and (min-width: 551px) and (max-width: 768px) {
   .home__text-wrapper h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     line-height: 6rem;
+  }
+  .home__text-wrapper h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .home__text-wrapper h3 {
+    font-size: 2rem;
+    line-height: 5rem;
   }
 }
 
@@ -115,4 +144,17 @@
     font-size: 6rem;
     line-height: 8rem;
   }
+  .home__text-wrapper h2 {
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+}
+
+#additional-info {
+    display: flex;
+}
+
+.projects{
+  background-color: var(--theme-background-color);
+  height: 100%;
 }

@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-  --theme-background-color: black;
-  --theme-main-color: rgb(0, 110, 255);
-  --theme-text-color: #e2f2ff;
-  --theme-nav-background-color: black;
-  --theme-primary-font-family:  "Montserrat";
-  --theme-secondary-font-family:"Roboto Mono", monospace;
+  --theme-background-color: #dbebeb;
+  --theme-main-color: #e2f2ff;
+  --theme-secondary-color: #e2f2ffaa;
+  --theme-nav-background-color: #111a21db;
+  --theme-primary-font-family:  "Oswald", sans-serif;
+  --theme-secondary-font-family: "Source Code Pro", monospace;
 }
 
 * {
@@ -26,7 +28,21 @@ body {
   background: var(--theme-background-color);
   height: 100%;
   font-family: var(--theme-primary-font-family);
-  font-weight: 100;
+  font-weight: 200;
+  background: linear-gradient(83deg,#281304,#218e85,#be7710,#50dfe5);
+  background-size: 240% 240%;
+  animation: gradient-animation 16s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #root {

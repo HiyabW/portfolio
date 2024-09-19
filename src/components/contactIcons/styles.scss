@@ -1,0 +1,22 @@
+.contactIcons {
+    margin-left: 2rem;
+    margin-top: 9rem;
+    width: 3rem;
+    color: var(--theme-main-color);
+    position: absolute;
+
+    &__list {
+      list-style: none;
+
+      &-icon {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          transform: scale(1.5);
+          color: var(--theme-main-color);
+        }
+      }
+    }
+  }
