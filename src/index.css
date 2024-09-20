@@ -4,10 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-  --theme-background-color: #dbebeb;
-  --theme-main-color: #e2f2ff;
-  --theme-secondary-color: #e2f2ffaa;
-  --theme-nav-background-color: #111a21db;
+  --theme-background-color-light: #dbebeb;
+  --theme-background-color-dark: #090a11;
+  --theme-main-color-light: #e2f2ff;
+  --theme-secondary-color-light: #e2f2ffaa;
+  --theme-nav-background-color: #15212adb;
   --theme-primary-font-family:  "Oswald", sans-serif;
   --theme-secondary-font-family: "Source Code Pro", monospace;
 }
@@ -25,7 +26,6 @@ html {
 }
 
 body {
-  background: var(--theme-background-color);
   height: 100%;
   font-family: var(--theme-primary-font-family);
   font-weight: 200;

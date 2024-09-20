@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.scss";
 import { Animate } from "react-simple-animate";
 import { Typewriter } from "react-simple-typewriter";
+import { Motion } from "framer-motion";
 
 const Home = () => {
   return (

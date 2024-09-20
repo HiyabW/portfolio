@@ -10,6 +10,7 @@
 
     .logoIcon {
         font-size: 3rem;
+        mix-blend-mode: difference;
     }
 
     &__container{
@@ -21,7 +22,7 @@
         flex: 1;
         
         &__logo{
-            color: var(--theme-main-color);
+            color: var(--theme-main-color-light);
             cursor: pointer;
             text-decoration: none;
         }
@@ -51,11 +52,11 @@
 
             &:hover::after{
                 width: 100%;
-                background: var(--theme-main-color);
+                background: var(--theme-main-color-light);
             }
 
             &__links{
-                color: var(--theme-main-color);
+                color: var(--theme-main-color-light);
                 text-decoration: none;
                 padding: 0.5rem;
             }
@@ -90,7 +91,11 @@
     .nav-icon{
         display:block;
         cursor: pointer;
-        color: var(--theme-main-color);
+        color: var(--theme-main-color-light);
         padding-right: 20px;
     }
+}
+
+.changedColor{
+    color: black
 }

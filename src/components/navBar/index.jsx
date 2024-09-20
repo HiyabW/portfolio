@@ -1,9 +1,9 @@
 import React from "react";
-import {FaBars, FaReact } from "react-icons/fa";
-import {HiX} from 'react-icons/hi'
+import { FaBars, FaReact } from "react-icons/fa";
+import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import './styles.scss'
+import { useState, useEffect } from "react";
+import "./styles.scss";
 
 const data = [
   {
@@ -32,32 +32,51 @@ const data = [
   },
 ];
 const Navbar = () => {
-    const [toggleIcon, setToggleIcon] = useState(false);
+  const [toggleIcon, setToggleIcon] = useState(false);
+  const [changedColor, setChangedColor] = useState("header");
 
-    const handleToggleIcon = () => {
-        setToggleIcon(!toggleIcon)
+  const handleToggleIcon = () => {
+    setToggleIcon(!toggleIcon);
+  };
+
+  const listenScrollEvent = (event) => {
+    if (window.scrollY < 690) {
+      return setChangedColor("");
+    } else if (window.scrollY > 690) {
+      return setChangedColor("changedColor");
     }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
   return (
     <div>
       <nav className="navbar">
         <div className="navbar__container">
-          <Link to={"/"} className="navbar__container__logo">
-            <h1 className="logoIcon">h<i>w</i></h1>
+          <Link to={"/"} className={`navbar__container__logo ${changedColor}`}>
+            <h1 className="logoIcon">
+              h<i>w</i>
+            </h1>
           </Link>
         </div>
-        <ul className={`navbar__container__menu ${toggleIcon ? `active` : ''}`}>
-          {data.map((item,  key) => (
+        <ul className={`navbar__container__menu ${toggleIcon ? `active` : ""}`}>
+          {data.map((item, key) => (
             <li key={key} className="navbar__container__menu__item">
-              <Link className="navbar__container__menu__item__links" to={item.to}>
+              <Link
+                className={`navbar__container__menu__item__links ${changedColor}`}
+                to={item.to}
+              >
                 {item.label}
               </Link>
             </li>
           ))}
         </ul>
         <div className="nav-icon" onClick={handleToggleIcon}>
-            {
-                toggleIcon ? <HiX size={30}/> : <FaBars size={30}/>
-            }
+          {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
         </div>
       </nav>
     </div>

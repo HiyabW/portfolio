@@ -2,7 +2,7 @@
     margin-left: 2rem;
     margin-top: 9rem;
     width: 3rem;
-    color: var(--theme-main-color);
+    color: var(--theme-main-color-light);
     position: absolute;
 
     &__list {
@@ -15,7 +15,7 @@
         transition: 0.5s;
         &:hover {
           transform: scale(1.5);
-          color: var(--theme-main-color);
+          color: var(--theme-main-color-light);
         }
       }
     }

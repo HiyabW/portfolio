@@ -1,0 +1,38 @@
+.AboutMe {
+  background-color: var(--theme-background-color-dark);
+  padding-right: 15rem;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: var(--theme-main-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__myPic {
+    width: 70rem;
+    object-fit: contain;
+  }
+
+  &__myPicDiv {
+    width: 50%;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+  p {
+    font-size: 1.7rem;
+    font-family: var(--theme-secondary-font-family);
+  }
+
+  &__text-wrapper {
+    width: 50%;
+    margin-left: 10rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
