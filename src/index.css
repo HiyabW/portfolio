@@ -29,6 +29,11 @@ body {
   height: 100%;
   font-family: var(--theme-primary-font-family);
   font-weight: 200;
+  line-height: 2.5rem;
+  background-color: var(--theme-background-color-dark);
+  overflow: auto;
+}
+.gradientBg {
   background: linear-gradient(83deg,#281304,#218e85,#be7710,#50dfe5);
   background-size: 240% 240%;
   animation: gradient-animation 16s ease infinite;

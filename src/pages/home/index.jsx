@@ -64,11 +64,11 @@ const Home = () => {
           >
             <div className="home__text-wrapper__additional-info">
               <div className="currently">
-                <h3>currently</h3>
+                <h3>currently</h3> <br />
                 <p>a software developer @ The Aerospace Corporation</p>
               </div>
               <div className="drivenBy">
-                <h3>driven by</h3>
+                <h3>driven by</h3> <br />
                 <p>
                   human connection, storytelling, & technical innovation for
                   social good

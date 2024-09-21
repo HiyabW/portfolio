@@ -16,7 +16,7 @@ function App() {
   console.log(location)
 
   return (
-    <div className="App">
+    <div className={`App ${location.pathname==='/' ? 'gradientBg' : ''}`}>
 
       <Navbar />
 
@@ -27,7 +27,7 @@ function App() {
           <Route index path='/' element={<Home />} />
           <Route index path='/about' element={<About />} />
           <Route index path='/contact' element={<Contact />} />
-          <Route index path='/porfolio' element={<Portfolio />} />
+          <Route index path='/portfolio' element={<Portfolio />} />
           <Route index path='/resume' element={<Resume />} />
           <Route index path='/skills' element={<Skills />} />
         </Routes>
